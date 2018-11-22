@@ -29,6 +29,11 @@ namespace NetCore.Web.Controllers
             {
                 Id = 3,
                 Name = "Item 3"
+            },
+            new ValueViewModel
+            {
+                Id = 4,
+                Name = "Item 4"
             }
         };
 
