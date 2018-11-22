@@ -7,7 +7,7 @@ before_install:
   - echo "$HEROKU_PASSWORD" | docker login -u "$HEROKU_USERNAME" --password-stdin registry.heroku.com
 
 script:
-  - docker build -t willwolfram18/aspnetcore-heroku
+  - docker build -t willwolfram18/aspnetcore-heroku .
   - docker tag willwolfram18/aspnetcore-heroku registry.heroku.com/$HEROKU_APP/web
 
 deploy:
