@@ -13,7 +13,8 @@ script:
 deploy:
   provider: script
   script:
-    docker push willwolfram18/aspnetcore-heroku
-    docker push registry.heroku.com/$HEROKU_APP/web
+    docker push willwolfram18/aspnetcore-heroku;
+    heroku container:push web -a $HEROKU_APP;
+    heroku container:release web -a $HEROKU_APP;
   on:
     branch: dev
