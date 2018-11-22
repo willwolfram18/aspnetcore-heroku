@@ -4,4 +4,5 @@ services:
   - docker
 
 before_install:
+  - heroku auth:whoami
   - docker build -t registry.heroku.com/guarded-harbor-15913 .
